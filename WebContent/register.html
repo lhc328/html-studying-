@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册页面</title>
+	<meta charset="utf-8">
+	<script>
+		function validate(){
+			var pwd1 = document.getElementById("pwd1").value;
+			var pwd2 = document.getElementById("pwd2").value;
+			if(pwd1 == pwd2){
+				document.getElementById("button").disabled = false;
+			}else{
+				document.getElementById("unmap").innerHTML="<font color='red'>两次密码不一致</font>"
+				document.getElementById("button").disabled = true;	
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>用户名:	</td>
+				<td><input type="text" name="name" required="true"></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" id="pwd1" name="password" required="true"></td>
+			</tr>
+			<tr>
+				<td>确认密码：</td>
+				<td><input type="password" id="pwd2" name="password1" required="true" onkeyup="validate()"></td>
+				<td><span id="unmap"></span></td>
+			</tr>
+			<tr>
+				<td>性别：</td>
+				<td>
+					<input type="radio" name="sex" value="male">男
+					<input type="radio" name="sex" value="female">女
+				</td>
+			</tr>
+			<tr>
+				<td>职业：</td>
+				<td>
+					<select>
+						<option value="1">学生</option>
+						<option value="2">职员</option>
+						<option value="3">经理</option>
+						<option value="4">军人</option>
+						<option value="5">自由人</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2">个人爱好：</td>
+				<td>
+					<label><input type="checkbox" name="hobby" value="1">电脑网络</label>
+					<label><input type="checkbox" name="hobby" value="2">影视娱乐</label>
+					<label><input type="checkbox" name="hobby" value="3">棋牌娱乐</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label><input type="checkbox" name="hobby" value="4">读书读报</label>
+					<label><input type="checkbox" name="hobby" value="5">美酒佳肴</label>
+					<label><input type="checkbox" name="hobby" value="6">绘画书法</label>
+				</td>
+			</tr>
+			<tr>
+				<td>个人说明：</td>
+				<td>
+					<textarea rows="10" cols="50" name="intro">
+						
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input id="button" type="submit" value="提交">
+				<input type="reset" value="重置"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

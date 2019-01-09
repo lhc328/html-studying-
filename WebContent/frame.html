@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>在框架中显示页面</title>
+</head>
+<frameset rows="80,*">
+	<frame src="head.html" name="head">
+	<frameset cols="25%,*">
+		<frame src="Left.html" name="left">
+		<frame src="right.html" name="right">
+	</frameset>
+		<noframes>
+			<body>
+				此网页使用了框架，但你的浏览器不支持。
+			</body>
+		</noframes>
+</frameset>
+</html>
